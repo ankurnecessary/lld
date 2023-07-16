@@ -14,9 +14,14 @@ or
   npx tsc path/to/typescript/file.ts && node path/to/javascript/file on typescript file path.js
 ~~~
 
-If you want to run a file only then use the command below
+If you want to run [only one] file then use the command below
 ~~~bash
   npm run build path/to/typescript/file.ts && node path/to/javascript/file on typescript file path.js
+~~~
+
+To view all the js files in a project, except .ts files and .js files in node_modules folder
+~~~bash
+  find . -name "*.js" -type f -not -path '*/node_modules/*'
 ~~~
 
 To delete all the js files in a project, except .ts files and .js files in node_modules folder

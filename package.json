@@ -4,9 +4,9 @@
   "description": "To learn LLD",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc",
-    "deletejs": "find -name '*.js' -type f -not -path '*/node_modules/*' && find . -name '*.js' -type f -not -path '*/node_modules/*' -delete && find . -name '*.js.map' -type f -not -path '*/node_modules/*' -delete"
+    "test": "echo \"Error: no test specified\" && exit 1"
+    , "build": "tsc"
+    , "deletejs": "find -name '*.js' -type f -not -path '*/node_modules/*' && find . -name '*.js' -type f -not -path '*/node_modules/*' -delete && find . -name '*.js.map' -type f -not -path '*/node_modules/*' -delete"
   },
   "author": "Ankur Gupta",
   "license": "ISC",
