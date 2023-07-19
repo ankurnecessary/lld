@@ -1,4 +1,5 @@
 /*
+https://stackoverflow.com/questions/61154499/typescript-multiple-constructor-implementations-are-not-allowed
 We actually don't have the concept of constructor overloading in typescript but we have other way of doing it.
 */
 
@@ -24,19 +25,19 @@ class User {
     */
 
     // This static method will behave like a [[[constructor]]]
-    static fromJsonUser(item: { user?: string, password?: string }) {
+    static constructorFromUser(item: { user?: string, password?: string }) {
         return new User(item.user);
     }
 
     // This static method will behave like a [[[constructor]]]
-    static fromJsonPassword(item: { user?: string, password?: string }) {
+    static constructorFromPassword(item: { user?: string, password?: string }) {
         return new User(undefined, item.password);
     }
 
 }
 
-const user1: User = User.fromJsonUser({ user: "ankurnecessary" });
-const user2: User = User.fromJsonPassword({ password: "dkjfdhs21312" });
+const user1: User = User.constructorFromUser({ user: "ankurnecessary" });
+const user2: User = User.constructorFromPassword({ password: "dkjfdhs21312" });
 
 console.log(user1);
 console.log(user2);
